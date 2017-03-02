@@ -1,0 +1,18 @@
+﻿@using Vidlyr.Models
+@model Customer
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+<ul>
+    <li>MembershipType: @Model.MembershipType.MemberShipType</li>
+    @if (Model.BirthdayDate.HasValue)
+    {
+    <li>Birthday Date : @Model.BirthdayDate.Value.ToShortDateString()</li>
+    }
+    
+</ul>
+
